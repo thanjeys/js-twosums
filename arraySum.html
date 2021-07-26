@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sum</title>
+</head>
+<body>
+    <h2>Array Sum HTML</h2>
+    
+    <script>
+
+        let numbers  = [0, 2, 4, 5, 11]; 
+        let product = 13; 
+
+        function arraySum(arr, product)
+        {
+            for(var i=0; i<numbers.length; i++) 
+            {
+                for(var j=i; j<numbers.length; j++)
+                {
+                    var sum = numbers[i] + numbers[j];
+                    if(sum == product)
+                    {
+                        return [i, j];
+                    }
+                }
+            }
+        }
+
+        
+
+        console.log(arraySum(numbers, product));
+
+        
+    </script>
+</body>
+</html>
